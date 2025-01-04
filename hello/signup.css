@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poopins',sans-serif;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/static/images/bgg.jpg');
+    background-size:100% 100%;
+    background-position: center;
+
+}
+
+.form-box{
+    width:420px ;
+    justify-content: center;
+    border-radius: 20px;
+    background:transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    display: flex;
+    padding: 30px 40px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+    color: white;
+    
+    
+}
+
+
+.form-box{
+    animation-name: hi;
+    animation-duration: 2s;
+}
+
+@keyframes hi{
+    from{ opacity :20%;}
+    to {opacity :100%;}
+}
+
+.form-box h2{
+    text-align: center;
+    color: rgb(199, 247, 255);
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.form-box .inputBox{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.inputBox input{
+    width: 340px;
+    height: 20px;
+    background: transparent;
+    border: groove;
+    outline: none;
+    border: 2px solid rgba(255,255,255,255,.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 20px 60px 20px 20px;
+    
+
+}
+
+.inputBox input::placeholder{
+    color: white;
+}
+
+
+
+.form-box .button{
+    width: 100%;
+    height: 45px;
+    background: rgb(202, 237, 255);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #06262b;
+    font-weight: 600;
+    transition: 0.4s ease;
+}
+
+.form-box .button :hover{
+    background-color:#06262b;
+    color: rgb(202, 237, 255);
+    border-style: groove;
+
+}
+
+.form-box .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a{
+    color: rgb(139, 131, 255);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.register-link p a:hover{
+    text-decoration: underline;
+}
