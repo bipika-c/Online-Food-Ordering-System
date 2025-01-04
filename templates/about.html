@@ -1,0 +1,169 @@
+{%extends 'home.html'%}
+
+
+{%load static%}
+
+{%block start%}
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Additional font for variety -->
+
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    .dark {
+        background: #333;
+        color: #fff;
+        padding: 15px 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+        width: 90%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .about-us, .our-story, .our-cuisine {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .about-us img, .our-story img, .our-cuisine img {
+        width: 350px;
+        height: auto;
+        border-radius: 8px;
+        margin: 20px;
+        margin-top: 20px;
+    }
+
+    .about-us img {
+        margin-right: 20px;
+        
+    }
+
+    .our-story img {
+        margin-left: 20px;
+    }
+
+    .about-us-text, .our-story-text, .our-cuisine-text {
+        flex: 1;
+    }
+
+    .about-us-text h2, .our-story-text h2, .our-cuisine-text h2 {
+        font-family: 'Merriweather', serif;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .about-us-text p, .our-story-text p, .our-cuisine-text p {
+        font-size: 18px;
+        line-height: 1.6;
+        
+    }
+
+    .highlight {
+        text-align: center;
+        margin: 40px 0;
+    }
+
+    .highlight .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .highlight .item {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 10px;
+        padding: 20px;
+        text-align: center;
+        flex: 1 1 calc(33.333% - 20px);
+        box-sizing: border-box;
+    }
+
+    .highlight .item .text {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: rgb(24, 24, 81);
+    }
+
+    .highlight .item .icon img {
+        width: 50px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .highlight .item .description {
+        font-size: 1em;
+        color: #29161a;
+    }
+</style>
+
+<meta name="description" content="Welcome to Shreya Khaja Ghar, your go-to destination for delicious and authentic cuisine in Kathmandu. Experience the best of traditional and innovative dishes with us.">
+<meta name="keywords" content="Shreya Khaja Ghar, Kathmandu, authentic cuisine, restaurant, traditional food">
+
+<section class="container about-us">
+    <img src="{% static 'images/food_photo.jpg' %}" alt="About Us" >
+    <div class="about-us-text">
+        <h2>About Us</h2>
+        <p>Welcome to Shreya Khaja Ghar. Nestled in the heart of Kathmandu ‘Shreya Khaja Ghar’ beckons food enthusiasts with its tantalizing blend of flavours located at near Shobha Bhagawati Bridge, Kathmandu. The owner of this organization is middle aged man named ‘Ram Lama’. He started this organization 4 years ago.
+
+            It is a local type of restaurant renowned for its local foods that fulfils our hunger. This restaurant chef artfully blends local, seasonal ingredients to create a menu that tantalizes the taste buds.
+            
+            This restaurant is ready to redefine peoples dining expectations, one delivery at a time.
+            </p>
+    </div>
+</section>
+
+<section class="container dark our-story">
+    <div class="our-story-text">
+        <h2>Our Story</h2>
+        <p> 
+
+            Shreya Khaja Ghar was founded in 2020 with a vision to bring authentic flavors to our community. Our journey started with a passion for food and a desire to create a welcoming environment for all our guests. Over the years, we have grown, but our dedication to quality and tradition remains unchanged.
+            
+            From humble beginnings, we set out to share the rich and diverse culinary heritage that inspired us. Our recipes are crafted with love and care, using only the finest ingredients to ensure every bite is a delightful experience. The essence of our cuisine lies in the perfect blend of spices and the time-honored techniques that have been passed down through generations.
+            
+            We believe that food is not just about nourishment but also about bringing people together. <br>Thank you for being a part of our story.</p>
+    </div>
+    <img src="{% static 'images/cooking.jpg' %}" alt="Our Story">
+</section>
+
+<section class="container our-cuisine">
+    <img src="{% static 'images/traditional-newari-window.jpg' %}" alt="Delicious Cuisine">
+    <div class="our-cuisine-text">
+        <h2>Our Cuisine</h2>
+        <p>Founded in 2020, Shreya Khaja Ghar celebrates the authentic flavors of Newari cuisine and local delicacies. Our journey began with a passion for food and a commitment to quality. Our menu showcases a diverse array of dishes, from traditional Newari favorites like Yomari and Bara to innovative creations blending local ingredients with modern techniques. Join us to savor these vibrant flavors in a cozy, Newari-themed setting that welcomes all guests to experience the heart of Kathmandu's culinary scene.
+        </p>
+    </div>
+</section>
+
+<section class="highlight">
+  <div class="container">
+    <div class="item">
+      <div class="text">Hygienic Food</div>
+      <div class="icon"><i class='bx bxs-dish bx-tada' style="font-size: 2.8em;"></i></div>
+      <div class="description">Cleanliness is next to Godliness.</div>
+    </div>
+    <div class="item">
+      <div class="text">Delivery</div>
+      <div class="icon"><i class='bx bxs-truck bx-tada' style="font-size: 2.8em;"></i></div>
+      <div class="description">Free, fast, reliable delivery all over Kathmandu.</div>
+    </div>
+  </div>
+</section>
+
+
+{%endblock%}

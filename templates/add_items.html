@@ -1,0 +1,57 @@
+<!-- {%extends 'home.html'%}
+
+
+{%load static%}
+
+{%block start%}
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h2>Add Items</h2>
+
+    <div class="form-group">
+        <label for="name">Item Name:</label>
+        <input type="text" id="name" name="itemname" required>
+    </div>
+
+    <div class="form-group">
+        <label for="category">Food Category:</label>
+        <select id="category" name="food_category" required>
+            <option value="">Select a category</option>
+            <option value="Vegeterian">Veg</option>
+            <option value="Non-Vegeterian">Non-veg</option>
+            <option value="Drinks">Drinks</option>
+         
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="photo">Food Image:</label>
+        <input type="file" id="photo" name="food_image" accept="image/*" required>
+    </div>
+
+    <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="itemprice" step="0.01" required>
+    </div>
+
+    <div class="form-group">
+        <label for="about">Description</label>
+        <textarea id="about" name="food_description" rows="5" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="discount">Discount (%):</label>
+        <input type="number" id="discount" name="discount" step="0.01" min="0" max="100" required>
+    </div>
+
+    <div class="form-group">
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+
+
+      
+
+{%endblock%} -->

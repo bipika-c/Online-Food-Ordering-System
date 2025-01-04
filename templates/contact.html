@@ -1,0 +1,100 @@
+
+{%extends 'home.html'%}
+
+
+{%load static%}
+
+{%block start%}
+
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+
+
+ <style>
+    /* Additional styles specific to the contact page */
+    .contact-section {
+        background-color: #f9f9f9;
+        padding: 50px;
+    }
+    .contact-section h1 {
+        font-family: 'Merriweather', serif;
+        font-size: 2.5em;
+        color: #000000;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .contact-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap-reverse;
+    }
+    .contact-details {
+        flex: 1 1 400px;
+        margin-right: 30px;
+    }
+    .contact-details h2 {
+        font-family: 'Roboto Slab', serif;
+        font-size: 1.8em;
+        color: #000000;
+        margin-bottom: 20px;
+    }
+    .contact-details p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        color: #0f0f37;
+    }
+    .map-container {
+        flex: 1 1 calc(100% - 430px);
+    }
+    .map-container iframe {
+        width: 100%;
+        height: 450px;
+        border: 0;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+        .contact-content {
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-details, .map-container {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="contact-section">
+        <h1>Contact Us</h1>
+
+        <div class="contact-content">
+            <div class="contact-details">
+                <h2>Contact Information</h2>
+
+                <p>
+                    We'd love to hear from you! Whether you have questions about our recipes, need assistance with an order, or want to share your culinary creations, our team is here to help. Your feedback and suggestions are always welcome as they help us serve you better. Thank you for being a part of our food-loving community!
+                </p>
+
+                <p>
+                    <strong>Email:</strong> <a href="mailto:shreya05@example.com">shreya05@example.com</a><br>
+                    <strong>Phone:</strong> <a href="tel:+9779813339945">9813339945</a>
+                </p>
+            </div>
+
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220.75744445338574!2d85.30142665834097!3d27.713608426504187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18f058e59c5b%3A0x22c992e25fcdbbd8!2sSavi%20Fashion!5e0!3m2!1sen!2snp!4v1715884546736!5m2!1sen!2snp" 
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{%endblock%}
